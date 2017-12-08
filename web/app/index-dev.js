@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { AppContainer } from "react-hot-loader";
+//import { AppContainer } from "react-hot-loader";
 
 /*
 * Routes-dev is only needed for react hot reload, as this does not work with
@@ -14,22 +14,22 @@ require("./components/Utility/Prototypes"); // Adds a .equals method to Array fo
 const rootEl = document.getElementById("content");
 const render = () => {
     ReactDOM.render(
-        <AppContainer>
+        <div>
             <Routes />
-        </AppContainer>,
+        </div>,
         rootEl
     );
 };
 render();
 
-if (module.hot) {
-    module.hot.accept("./Routes-dev.jsx", () => {
-        const NextApp = require("./Routes-dev").default;
-        ReactDOM.render(
-          <AppContainer>
-            <NextApp />
-          </AppContainer>,
-          document.getElementById("content"),
-        );
-    });
-}
+//if (module.hot) {
+//    module.hot.accept("./Routes-dev.jsx", () => {
+//        const NextApp = require("./Routes-dev").default;
+//        ReactDOM.render(
+//          <AppContainer>
+//            <NextApp />
+//          </AppContainer>,
+//          document.getElementById("content"),
+//        );
+//    });
+//}

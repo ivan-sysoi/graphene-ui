@@ -84,6 +84,7 @@ class WalletDb extends BaseStore {
     }
 
     process_transaction(tr, signer_pubkeys, broadcast, extra_keys = []) {
+        console.log('process_transaction', tr, signer_pubkeys, broadcast, extra_keys)
         if(Apis.instance().chain_id !== this.state.wallet.chain_id)
             return Promise.reject("Mismatched chain_id; expecting " +
                 this.state.wallet.chain_id + ", but got " +

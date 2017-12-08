@@ -101,7 +101,7 @@ module.exports = function(options) {
     } else {
         // plugins.push(new webpack.optimize.OccurenceOrderPlugin());
         plugins.push(new webpack.DefinePlugin({"process.env": {NODE_ENV: JSON.stringify("development")}}));
-        plugins.push(new webpack.HotModuleReplacementPlugin());
+        //plugins.push(new webpack.HotModuleReplacementPlugin());
         plugins.push(new webpack.NoEmitOnErrorsPlugin());
     }
 
@@ -111,8 +111,8 @@ module.exports = function(options) {
             app: options.prod ?
             path.resolve(root_dir, "app/Main.js") :
             [
-                "react-hot-loader/patch",
-                "webpack-hot-middleware/client",
+                //"react-hot-loader/patch",
+                //"webpack-hot-middleware/client",
                 path.resolve(root_dir, "app/Main-dev.js")
             ]
         },

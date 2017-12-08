@@ -325,6 +325,9 @@ class Transfer extends React.Component {
                                 <button className={submitButtonClass} type="submit" value="Submit" tabIndex={tabIndex++}>
                                     <Translate component="span" content="transfer.send" />
                                 </button>
+                                <button onClick={this.onTestBtnClick} className={submitButtonClass} type="submit" value="Submit" tabIndex={tabIndex++}>
+                                    Test btn
+                                </button>
                             </span>}
                         </div>
                         {/* TODO: show remaining balance */}

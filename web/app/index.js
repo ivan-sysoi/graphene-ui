@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { AppContainer } from "react-hot-loader";
+//import { AppContainer } from "react-hot-loader";
 import { Router, browserHistory, hashHistory } from "react-router/es";
 /*
 * Routes-dev is only needed for react hot reload, as this does not work with
@@ -20,9 +20,9 @@ const history = __HASH_HISTORY__ ? hashHistory : browserHistory;
 const rootEl = document.getElementById("content");
 const render = () => {
     ReactDOM.render(
-        <AppContainer>
+        <div>
             <Router history={history} routes={routes} />
-        </AppContainer>,
+        </div>,
         rootEl
     );
 };

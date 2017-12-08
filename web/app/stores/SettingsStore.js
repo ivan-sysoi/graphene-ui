@@ -16,7 +16,7 @@ class SettingsStore {
 
         this.defaultSettings = Immutable.Map({
             locale: "en",
-            apiServer: "wss://bitshares.openledger.info/ws",
+            apiServer: "wss://77.77.77.78:8090/ws",
             faucet_address: "https://bitshares.openledger.info",
             unit: CORE_ASSET,
             showSettles: false,

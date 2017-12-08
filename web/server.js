@@ -2,7 +2,7 @@ var path = require("path");
 var webpack = require("webpack");
 var express = require("express");
 var devMiddleware = require("webpack-dev-middleware");
-var hotMiddleware = require("webpack-hot-middleware");
+//var hotMiddleware = require("webpack-hot-middleware");
 
 var ProgressPlugin = require("webpack/lib/ProgressPlugin");
 var config = require("./conf/webpack-dev");
@@ -19,7 +19,7 @@ app.use(devMiddleware(compiler, {
     historyApiFallback: true
 }));
 
-app.use(hotMiddleware(compiler));
+//app.use(hotMiddleware(compiler));
 
 app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "app/assets/index-dev.html"));

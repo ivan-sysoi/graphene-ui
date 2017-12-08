@@ -102,9 +102,13 @@ class BalanceClaimActive extends Component {
     }
 
     onClaimBalance() {
+        console.log('onClaimBalance: ', this)
         WalletActions.importBalance( this.props.claim_account_name,
             this.props.selected_balances, true //broadcast
-        ).catch((error)=> {
+        )
+            .then(f => f())
+
+            .catch((error)=> {
             console.error("claimBalance", error)
             let message = error
             try { message = error.data.message } catch(e) {}

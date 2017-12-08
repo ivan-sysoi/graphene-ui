@@ -212,11 +212,12 @@ class WalletActions {
                 }
                 // With a lot of balance claims the signing can take so Long
                 // the transaction will expire.  This will increase the timeout...
-                tr.set_expire_seconds( (15 * 60) + balance_claims.length);
-
+                //tr.set_expire_seconds( (15 * 60) + balance_claims.length);
+                console.log(tr)
                 return (dispatch) => {
                     return WalletDb.process_transaction(tr, Object.keys(signer_pubkeys), broadcast )
                     .then(result => {
+                        console.log(result);
                         dispatch(true);
                         return result;
                     });
